@@ -26,10 +26,6 @@ func division(x int, y int) int {
 	return int(divResult)
 }
 
-func modulus(x int, y int) int {
-	return x % y
-}
-
 func main() {
 	fmt.Println("Hello. This is a calculator app for 2 integer inputs. Please select one of the options to begin:")
 
@@ -45,13 +41,12 @@ func main() {
 		fmt.Println("2. Subtraction")
 		fmt.Println("3. Multiplication")
 		fmt.Println("4. Division")
-		fmt.Println("5. Modulus")
-		fmt.Println("6. Exit Program")
+		fmt.Println("5. Exit Program")
 
 		//Obtain menu selection
 		//TODO: Sanitize input (create loop -- implement interface?)
 		fmt.Scanf("%v", &userInput)
-		if userInput == 6 {
+		if userInput == 5 {
 			break
 		}
 		//Obtain user input for 2 numbers
@@ -69,8 +64,6 @@ func main() {
 		case 4:
 			result = division(x, y)
 		case 5:
-			result = modulus(x, y)
-		case 6:
 			exit = false
 		}
 
